@@ -11,7 +11,7 @@ int a;
 int b;
 for (a = 0; a <= 99; a++)
 {
-for (b = a; b <= 99; b++)
+for (b = a + 1; b <= 99; b++)
 {
 putchar('0' + (a / 10));
 putchar('0' + (a % 10));
