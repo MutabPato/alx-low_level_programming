@@ -17,6 +17,15 @@ printf(",");
 printf(" ");
 }
 }
+for (a = n ; a >= 98 ; a--)
+{
+printf("%d", a);
+if (a != 98)
+{
+printf(",");
+printf(" ");
+}
+}
 printf("\n");
 return;
 }
