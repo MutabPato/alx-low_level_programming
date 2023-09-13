@@ -26,6 +26,11 @@ printf(",");
 printf(" ");
 }
 }
+while (a == 98)
+{
+++a;
+printf("%d", a);
+}
 printf("\n");
 return;
 }
