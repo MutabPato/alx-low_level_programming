@@ -22,11 +22,11 @@ if (a != 0)
 _putchar(',');
 _putchar(' ');
 }
-if (r < 10)
+if (r < 10 && a != 0)
 {
 _putchar(' ');
 }
-if (r < 100)
+if (r < 100 && a != 0)
 {
 _putchar(' ');
 }
@@ -47,4 +47,5 @@ _putchar(r % 10 + '0');
 }
 _putchar('\n');
 }
+_putchar('\n');
 }
