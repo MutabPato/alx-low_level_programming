@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ *_puts - prints string
+ *@str: pointer
+ * Return: Always 0.
+ */
+void _puts(char *str)
+{
+char s=' ';
+*str = s;
+while (*str != '\0')
+{
+_putchar('s');
+str++;
+}
+_putchar('\n');
+return;
+}
