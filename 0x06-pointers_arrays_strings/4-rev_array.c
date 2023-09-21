@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ *reverse_array - check the code
+ *@a: pointer
+ *@n: parameter
+ * Return: Always 0.
+ */
+void reverse_array(int *a, int n)
+{
+int i, rev;
+for (i = 0; i < n / 2; i++)
+{
+rev = a[i];
+a[i] = a[n - i - 1];
+a[n - i - 1] = rev;
+}
+return;
+}
