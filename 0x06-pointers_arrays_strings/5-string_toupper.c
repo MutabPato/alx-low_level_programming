@@ -7,13 +7,14 @@
  */
 char *string_toupper(char *str)
 {
-while (*str != '\0')
+char *ptr = str;
+while (*ptr)
 {
-if (*str >= 'a' && *str <= 'z')
+if (*ptr >= 'a' && *ptr <= 'z')
 {
-*str = *str - 32;
+*ptr = *ptr - 32;
 }
-str++;
+ptr++;
 }
 return (str);
 }
