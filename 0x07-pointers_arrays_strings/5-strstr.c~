@@ -1,0 +1,23 @@
+#include "main.h"
+/**
+ * _strstr -  finds the first occurrence of the substring
+ * @haystack: pointer to string
+ * @needle: pointer to substring
+ * Return: char.
+ */
+char *_strstr(char *haystack, char *needle)
+{
+while (*s != '\0')
+{
+if (*s == *accept)
+{
+return (s);
+}
+s++;
+}
+if (*accept == '\0')
+{
+return (s);
+}
+return ('\0');
+}
