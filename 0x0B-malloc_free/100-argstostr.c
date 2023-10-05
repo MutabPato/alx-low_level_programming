@@ -25,7 +25,7 @@ k++;
 }
 total_length += k + 1;
 }
-result = malloc(sizeof(char) * total_length);
+result = malloc(sizeof(char) * total_length + 1);
 if (result == NULL)
 {
 return (NULL);
