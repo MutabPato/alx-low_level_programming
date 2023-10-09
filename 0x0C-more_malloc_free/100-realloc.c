@@ -29,6 +29,14 @@ if (new_size == 0 && ptr != NULL)
 free(ptr);
 return (NULL);
 }
+if (new_ptr == NULL)
+{
+return (NULL);
+}
+if (new_size < old_size)
+{
+old_size = new_size;
+}
 free(ptr);
 return (new_ptr);
 }
