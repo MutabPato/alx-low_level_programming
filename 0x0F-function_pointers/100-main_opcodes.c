@@ -40,7 +40,7 @@ void print_opcodes(char *start, int bytes)
 int i;
 for (i = 0; i < bytes; i++)
 {
-printf("%02x", start[i] & 0xFF);
+printf("%02hhx", start[i]);
 if (i < bytes - 1)
 {
 printf(" ");
