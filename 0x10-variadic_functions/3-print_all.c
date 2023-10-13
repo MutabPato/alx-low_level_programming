@@ -13,10 +13,6 @@ int i = 0;
 char *str;
 char *sep = "";
 va_start(args, format);
-if (format == NULL)
-{
-return;
-}
 while (format && format[i])
 {
 switch (format[i])
@@ -28,7 +24,7 @@ case 'c':
 printf("%s%c", sep, va_arg(args, int));
 break;
 case 'f':
-printf("%s%f", sep, va_arg(args, double));
+printf("%s%.6f", sep, va_arg(args, double));
 break;
 case 's':
 {
