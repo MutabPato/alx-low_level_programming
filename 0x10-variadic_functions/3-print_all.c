@@ -12,10 +12,8 @@ va_list args;
 int i = 0;
 char *str;
 char *sep = "";
-if (format)
-{
 va_start(args, format);
-while (format[i])
+while (format && format[i])
 {
 switch (format[i])
 {
@@ -44,6 +42,5 @@ i++;
 }
 printf("\n");
 va_end(args);
-}
 return;
 }
