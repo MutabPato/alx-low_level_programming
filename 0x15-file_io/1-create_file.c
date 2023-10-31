@@ -9,37 +9,28 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file_descriptor, bytesWritten;
-	char *buffer;
 
 	if (filename == NULL)
 		return (-1);
 
+	file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+	if (file_descriptor == -1)
+	{
+		return (-1);
+	}
 	if (text_content == NULL)
 	{
-		file_descriptor = open(filename, O_CREAT);
+		close(file_descriptor);
 		return (1);
 	}
 
-	buffer = malloc(strlen(text_content));
-	if (buffer == NULL)
-		return (-1);
-
-	file_descriptor = open(filename, O_WRONLY | O_CREAT);
-	if (file_descriptor == -1)
-	{
-		free(buffer);
-		return (-1);
-	}
-
-	bytesWritten = write(STDOUT_FILENO, buffer, strlen(text_content));
+	bytesWritten = write(STDOUT_FILENO, text_content, strlen(text_content));
 	if (bytesWritten == -1 || (size_t)bytesWritten != strlen(text_content))
 	{
-		free(buffer);
 		close(file_descriptor);
 		return (-1);
 	}
 
-	free(buffer);
 	close(file_descriptor);
 	return (1);
 }
