@@ -9,23 +9,24 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file_descriptor, bytesWritten;
+	size_t text_length = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	file_descriptor = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+	file_descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (file_descriptor == -1)
-	{
 		return (-1);
-	}
+
 	if (text_content == NULL)
 	{
 		close(file_descriptor);
 		return (1);
 	}
 
-	bytesWritten = write(STDOUT_FILENO, text_content, strlen(text_content));
-	if (bytesWritten == -1 || (size_t)bytesWritten != strlen(text_content))
+	text_length = strlen(text_content);
+	bytesWritten = write(STDOUT_FILENO, text_content, text_length);
+	if (bytesWritten == -1 || (size_t)bytesWritten != text_length)
 	{
 		close(file_descriptor);
 		return (-1);
