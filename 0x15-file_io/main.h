@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <elf.h>
+#include <string.h>
 int main(int argc, char *argv[]);
 void print_elf_header_info(Elf64_Ehdr *header);
 void display_error(void);
