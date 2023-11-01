@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <elf.h>
 #include <string.h>
-int main(int argc, char *argv[]);
+int main(int argc, char **argv);
 void print_elf_header_info(Elf64_Ehdr *header);
 void display_error(void);
 ssize_t read_textfile(const char *filename, size_t letters);
