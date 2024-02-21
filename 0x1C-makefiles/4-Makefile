@@ -19,10 +19,10 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -f $(NAME) *~ *.~ *.swp *.swn *.swo
+	$(RM) $(NAME) *~ *.~ *.swp *.swn *.swo
 
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean:
 	clean oclean
