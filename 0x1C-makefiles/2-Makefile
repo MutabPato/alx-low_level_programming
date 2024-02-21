@@ -15,4 +15,4 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	rm -f school
+	rm -f $(OBJ) $(NAME)
