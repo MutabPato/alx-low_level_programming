@@ -22,10 +22,8 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	clean oclean
+fclean: clean oclean
 
-re:
-	fclean all
+re: fclean all
 
 .PHONY: all clean oclean fclean re
